@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:fontFamily="@font/press_start_2p"
-        android:text="00:00"
+        android:text="@string/maint"
         android:textAlignment="center"
         android:textColor="#FF0000"
         android:textSize="48sp"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/press_start_2p"
-        android:text="24"
+        android:text="@string/shott"
         android:textColor="#FF0000"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,8 +38,9 @@
         android:id="@+id/button_start_pause"
         android:layout_width="234dp"
         android:layout_height="66dp"
-        android:onClick="onClick"
-        android:visibility="invisible"
+        android:backgroundTint="#00FFFFFF"
+        android:onClick="onTimerClick"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/text_view_countdown"
         app:layout_constraintEnd_toEndOf="@+id/text_view_countdown"
         app:layout_constraintHorizontal_bias="1.0"
@@ -48,12 +49,12 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/PeriodText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/press_start_2p"
-        android:text="PERIOD"
+        android:text="@string/period"
         android:textColor="#FF0000"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,26 +62,13 @@
         app:layout_constraintTop_toBottomOf="@+id/shot" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/press_start_2p"
-        android:text="1"
-        android:textColor="#FF0000"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/Team1Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="275dp"
         android:fontFamily="@font/press_start_2p"
-        android:text="TEAM 1"
+        android:text="@string/team1"
         android:textColor="#FF0000"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -88,13 +76,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/Team2Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="275dp"
         android:layout_marginEnd="10dp"
         android:fontFamily="@font/press_start_2p"
-        android:text="TEAM 2"
+        android:text="@string/team2"
         android:textColor="#FF0000"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -102,44 +90,257 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/t1Score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/press_start_2p"
         android:scaleY="1.5"
-        android:text="00"
+        android:text="@string/team1score"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#FF0000"
         android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/Team1Name" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/t2Score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
         android:fontFamily="@font/press_start_2p"
         android:scaleY="1.5"
-        android:text="00"
+        android:text="@string/team2score"
+        android:textAlignment="center"
         android:textColor="#FF0000"
         android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/Team2Name" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/t1_1"
+        android:layout_width="50dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="-20dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/oneP"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.344"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/t1Score"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/t1_2"
+        android:layout_width="50dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#FFDD00"
+        android:text="@string/twoP"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t1_1"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/t1_3"
+        android:layout_width="50dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#2EFD00"
+        android:text="@string/threeP"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t1Score"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/t2_1"
+        android:layout_width="50dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="-20dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/oneP"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.66"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/t2Score" />
+
+    <Button
+        android:id="@+id/t2_2"
+        android:layout_width="50dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="#FFDD00"
+        android:text="@string/twoP"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/t1_2"
+        app:layout_constraintTop_toBottomOf="@+id/t2_1" />
+
+    <Button
+        android:id="@+id/t2_3"
+        android:layout_width="50dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="#2EFD00"
+        android:text="@string/threeP"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t2Score" />
+
+    <Button
+        android:id="@+id/Settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="33dp"
-        android:text="Button"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#777777"
+        android:text="@string/settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/sUndo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#FF0000"
+        android:text="@string/undo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/t1_1" />
+
+    <TextView
+        android:id="@+id/tO1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="@string/TOs"
+        android:textAlignment="textStart"
+        android:textColor="#FF0000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t1_3" />
+
+    <TextView
+        android:id="@+id/tO2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="@string/TOs"
+        android:textAlignment="textStart"
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t2_3" />
+
+    <Button
+        android:id="@+id/t1_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#00FFFFFF"
+        android:fontFamily="@font/press_start_2p"
+        android:text="@string/oneTO"
+        android:textColor="#FF0000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tO1"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/t2_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="#00FFFFFF"
+        android:fontFamily="@font/press_start_2p"
+        android:text="@string/oneTO"
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tO2" />
+
+    <TextView
+        android:id="@+id/t1F"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="@string/fouls"
+        android:textColor="#FF0000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t1_to" />
+
+    <TextView
+        android:id="@+id/t2F"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="@string/fouls"
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t2_to" />
+
+    <Button
+        android:id="@+id/t1F_Num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:backgroundTint="#00FFFFFF"
+        android:fontFamily="@font/press_start_2p"
+        android:text="@string/FoulZero"
+        android:textColor="#FF0000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t1F" />
+
+    <Button
+        android:id="@+id/t2F_Num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="#00FFFFFF"
+        android:fontFamily="@font/press_start_2p"
+        android:text="@string/FoulZero"
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t2F" />
+
+    <Button
+        android:id="@+id/pNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        android:fontFamily="@font/press_start_2p"
+        android:text="@string/pNumOne"
+        android:textColor="#FF0000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PeriodText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

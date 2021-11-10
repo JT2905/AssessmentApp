@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         updateCountDownText();
     }
 
-    public void onClick(View view) {
+    public void onTimerClick(View view) {
         if(mTimerRunning) {
             pauseTimer();
         } else {

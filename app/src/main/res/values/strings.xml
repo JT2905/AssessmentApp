@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">AssessmentApp</string>
+    <string name="maint">00:00</string>
+    <string name="shott">24</string>
+    <string name="period">PERIOD</string>
+    <string name="pNumOne">1</string>
+    <string name="pNumTwo">2</string>
+    <string name="pNumThree">3</string>
+    <string name="pNumFour">4</string>
+    <string name="team1">TEAM 1</string>
+    <string name="team2">TEAM 2</string>
+    <string name="team1score">00</string>
+    <string name="team2score">00</string>
+    <string name="oneP">1</string>
+    <string name="twoP">2</string>
+    <string name="threeP">3</string>
+    <string name="settings">SETTINGS</string>
+    <string name="undo">UNDO</string>
+    <string name="TOs">TIMEOUTS</string>
+    <string name="oneTO">1</string>
+    <string name="twoTO">2</string>
+    <string name="threeTO">3</string>
+    <string name="fouls">FOULS</string>
+    <string name="FoulZero">0</string>
+    <string name="FoulOne">1</string>
+    <string name="FoulTwo">2</string>
+    <string name="FoulThree">3</string>
+    <string name="FoulFour">4</string>
+    <string name="FoulFive">5</string>
+    <string name="FoulSix">6</string>
+    <string name="FoulSeven">7</string>
+
 </resources>
