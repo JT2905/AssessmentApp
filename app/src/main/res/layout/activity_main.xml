@@ -39,7 +39,7 @@
         android:layout_width="234dp"
         android:layout_height="66dp"
         android:backgroundTint="#00FFFFFF"
-        android:onClick="onTimerClick"
+
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/text_view_countdown"
         app:layout_constraintEnd_toEndOf="@+id/text_view_countdown"
