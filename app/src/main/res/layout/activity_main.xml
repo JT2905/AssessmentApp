@@ -21,6 +21,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/button_start_pause"
+        android:layout_width="234dp"
+        android:layout_height="66dp"
+        android:backgroundTint="#00FFFFFF"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_countdown"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_countdown"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/text_view_countdown"
+        app:layout_constraintTop_toTopOf="@+id/text_view_countdown"
+        app:layout_constraintVertical_bias="1.0" />
+
     <TextView
         android:id="@+id/shot"
         android:layout_width="wrap_content"
@@ -33,20 +46,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view_countdown" />
-
-    <Button
-        android:id="@+id/button_start_pause"
-        android:layout_width="234dp"
-        android:layout_height="66dp"
-        android:backgroundTint="#00FFFFFF"
-
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/text_view_countdown"
-        app:layout_constraintEnd_toEndOf="@+id/text_view_countdown"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/text_view_countdown"
-        app:layout_constraintTop_toTopOf="@+id/text_view_countdown"
-        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/PeriodText"
@@ -97,7 +96,7 @@
         android:layout_marginTop="40dp"
         android:fontFamily="@font/press_start_2p"
         android:scaleY="1.5"
-        android:text="@string/team1score"
+        android:text="@string/team1scoreInitial"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#FF0000"
@@ -114,7 +113,7 @@
         android:layout_marginEnd="10dp"
         android:fontFamily="@font/press_start_2p"
         android:scaleY="1.5"
-        android:text="@string/team2score"
+        android:text="@string/team2scoreInitial"
         android:textAlignment="center"
         android:textColor="#FF0000"
         android:textSize="48sp"
@@ -263,7 +262,7 @@
         android:layout_marginTop="5dp"
         android:backgroundTint="#00FFFFFF"
         android:fontFamily="@font/press_start_2p"
-        android:text="@string/oneTO"
+        android:text="@string/ToInitial"
         android:textColor="#FF0000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tO1"
@@ -277,7 +276,7 @@
         android:layout_marginEnd="10dp"
         android:backgroundTint="#00FFFFFF"
         android:fontFamily="@font/press_start_2p"
-        android:text="@string/oneTO"
+        android:text="@string/ToInitial"
         android:textColor="#FF0000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tO2" />
@@ -313,7 +312,7 @@
         android:layout_marginStart="10dp"
         android:backgroundTint="#00FFFFFF"
         android:fontFamily="@font/press_start_2p"
-        android:text="@string/FoulZero"
+        android:text="@string/FoulInitial"
         android:textColor="#FF0000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/t1F" />
@@ -325,7 +324,7 @@
         android:layout_marginEnd="10dp"
         android:backgroundTint="#00FFFFFF"
         android:fontFamily="@font/press_start_2p"
-        android:text="@string/FoulZero"
+        android:text="@string/FoulInitial"
         android:textColor="#FF0000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/t2F" />
@@ -336,7 +335,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#00FFFFFF"
         android:fontFamily="@font/press_start_2p"
-        android:text="@string/pNumOne"
+        android:text="@string/pNumInitial"
         android:textColor="#FF0000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
